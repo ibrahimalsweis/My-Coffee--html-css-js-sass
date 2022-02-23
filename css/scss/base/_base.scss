@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $main-text-color;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #e4e4e4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+h1,h2,h3,h5,h6{
+  font-family: "Satisfy", cursive;
+}
+ul,ol{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

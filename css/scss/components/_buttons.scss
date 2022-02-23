@@ -1,0 +1,42 @@
+.icon-menu {
+  @media (min-width: 767px) {
+    display: none!important;
+  }
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  @include flex-center;
+  flex-direction: column;
+  display: none;
+  span {
+    width: 45px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    right: 4px;
+    transition: $main-transition;
+  }
+  span:nth-child(1) {
+    transform: translateY(-10px);
+    width: 30px;
+  }
+  span:nth-child(3) {
+    transform: translateY(10px);
+    width: 27px;
+  }
+  &.active {
+    span:nth-child(2) {
+      transform: translateX(100px);
+    }
+    span:nth-child(1) {
+      transform: translateY(0) rotate(45deg);
+      width: 35px;
+    }
+    span:nth-child(3) {
+      transform: translateY(0) rotate(315deg);
+      width: 35px;
+    }
+  }
+}

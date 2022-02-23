@@ -1,0 +1,41 @@
+.header{
+    background-color: $main-color;
+    padding: 10px;
+    .container{
+        @include flex-between;
+        .logo{
+            div:first-child{
+                @include flex-center;
+            h2{
+            color: $main-text-color-alt;
+            }
+            img{
+                margin-right: 10px;
+            }
+            }
+        }
+        .links{
+           
+            transition: $main-transition;
+            overflow: hidden;
+            &.active{
+                height: 250px
+            }
+            @include flex-center;
+            li{
+                margin-left: 20px;
+                a{
+                    font-weight: bold;
+                    transition: $main-transition;
+                    &:hover{
+                        text-decoration: underline;
+                        color: $main-text-color-alt;
+                    }
+                    &.active{
+                        color: $main-text-color-alt;
+                    }
+                }
+            }
+        }
+    }
+}

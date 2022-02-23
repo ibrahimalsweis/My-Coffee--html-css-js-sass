@@ -1,0 +1,52 @@
+%padding-sections {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+%btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: $main-color;
+  color: white;
+  transition: $main-transition-alt;
+
+  &:hover {
+    box-shadow: 0 0 16px $main-color;
+  }
+}
+
+%btn-out {
+  &:hover {
+    background-color: #e0c5cc;
+    border: 1px solid $main-color;
+    color: $main-text-color;
+  }
+}
+
+%section-title {
+  @include flex-center;
+  justify-content: flex-start!important;
+  margin: 20px 0 ;
+  position: relative;
+
+  img{
+    margin-right: 10px;
+  }
+  h3{
+    color: $main-text-color-alt;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 2px;
+    background-color: $main-text-color-alt;
+  }
+}
+%section-padding{
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}

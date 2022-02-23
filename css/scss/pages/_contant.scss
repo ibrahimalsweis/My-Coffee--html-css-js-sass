@@ -1,0 +1,70 @@
+.contact {
+  @extend %section-padding;
+  .container {
+     @include gird-system(48%, 15px);
+    align-items: center;
+    .form {
+      h2 {
+        margin: 15px 0;
+      }
+
+      form {
+        padding: 10px;
+        // background-color: white;
+
+        div {
+          position: relative;
+          width: 100%;
+          background-color: white;
+          margin: 20px 0;
+          border-radius: $border-radius;
+          border: 1px solid #e4e4e4;
+          overflow: hidden;
+
+          label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            transition: $main-transition;
+          }
+          #label-textarea {
+            top: 20px;
+          }
+          input,
+          textarea {
+            padding: 8px;
+            width: 100%;
+            border-radius: $border-radius;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            transition: $main-transition;
+            &:focus {
+              border: 2px solid $main-text-color-alt;
+              ~ label {
+                left: -100px;
+              }
+            }
+          }
+        }
+        .btn {
+          @extend %btn;
+          background-color: $main-text-color-alt;
+          border-radius: 5px;
+          box-shadow: none !important;
+          cursor: pointer;
+        }
+      }
+    }
+    .map {
+      height: 350px;
+      overflow: hidden;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

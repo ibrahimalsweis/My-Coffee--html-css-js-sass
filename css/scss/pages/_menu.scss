@@ -1,0 +1,105 @@
+.bast-coffee {
+  .container {
+    .title-section {
+      width: 100%;
+    }
+  }
+}
+.our-menu {
+  .container {
+    .content {
+      width: 100%;
+      @include flex-around;
+      align-items: flex-start;
+      .links {
+        background-image: url("../../../images/vertical-menu-bg.png");
+        width: 243px;
+        height: 392px;
+        ul {
+          width: 100%;
+          height: 100%;
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          li {
+            width: 100%;
+            text-align: center;
+            a {
+              transition: $main-transition;
+              &:hover {
+                color: $main-text-color-alt;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+      .products {
+        // width: 70%;
+        .box {
+          display: flex;
+          align-items: center;
+          margin: 20px 0;
+          padding: 12px;
+          border-radius: $border-radius;
+          background-color: white;
+          img {
+            width: 20%;
+            margin: 0 12px;
+          }
+          .text {
+            padding: 10px;
+            h4 {
+              margin-bottom: 10px;
+              font-size: $font-size;
+              &:hover {
+                color: $main-text-color-alt;
+              }
+            }
+            p {
+              font-size: 12px;
+              line-height: 2;
+              width: 360px;
+            }
+          }
+          > a {
+            width: 90px;
+            height: 90px;
+            text-align: center;
+            line-height: 90px;
+            border-radius: 50%;
+            background-color: #524c4c;
+            position: relative;
+            &:hover {
+              &::before {
+                border-color: $main-text-color-alt;
+              }
+              * {
+                color: $main-text-color-alt;
+              }
+            }
+            &::before {
+              content: "";
+              transition: $main-transition;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 80%;
+              height: 80%;
+              border: 2px solid;
+              border-radius: 50%;
+            }
+            span {
+              position: absolute;
+              left: 30px;
+              top: -5px;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

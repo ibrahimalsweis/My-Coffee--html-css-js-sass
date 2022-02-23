@@ -1,0 +1,67 @@
+.footer {
+  background-color: #302f2f;
+  .container {
+    padding: 20px;
+    @include gird-system(280px, 20px);
+    > div {
+      padding: 10px;
+    }
+    h4 {
+      font-size: 33px;
+      color: white;
+    }
+    p {
+      margin: 20px 0;
+      line-height: $line-height;
+      font-size: 15px;
+      color: white;
+    }
+    .links {
+      ul {
+        padding: 10px 0;
+        li {
+          margin: 10px 0;
+          a {
+            font-weight: bold;
+            font-size: 18px;
+          }
+          &:hover {
+            a {
+              color: $main-text-color-alt;
+            }
+          }
+        }
+      }
+    }
+
+    .social {
+      .icons {
+        display: flex;
+        li {
+          @include flex-center;
+          width: 40px;
+          height: 40px;
+          border-radius: $border-radius;
+          background-color: #505050;
+          margin-right: 20px;
+          transition: $main-transition;
+
+          i {
+            color: white;
+            font-size: $font-size;
+          }
+
+          &:hover {
+            background-color: $main-text-color-alt;
+          }
+        }
+      }
+    }
+  }
+  > p {
+    background-color: rgba(#505050, 50%);
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+  }
+}

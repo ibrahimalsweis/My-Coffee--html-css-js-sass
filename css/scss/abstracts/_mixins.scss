@@ -1,0 +1,41 @@
+@mixin flex-center {
+  display: flex!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin gird-system($width, $gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
+  gap: $gap;
+}
+
+@mixin bg-gradient($deg) {
+  @extend %btn;
+  background: linear-gradient(
+    to $deg,
+    rgba(171, 47, 82, 0.82) 0%,
+    #ffaf53 100%
+  );
+}
+
+@mixin title-section {
+
+    padding: 10px 0;
+    h3 {
+      // text-transform: uppercase;
+      color: $main-color-alt;
+      font-weight: bold;
+    }
+}
+
